@@ -14,14 +14,14 @@ RUN npm install
 ## Copia tudo que está no diretório onde o arquivo Dockerfile está 
 ## para dentro da pasta /usr/app do container
 ## Vamos ignorar a node_modules por isso criaremos um .dockerignore
-COPY . .
+# COPY . .
 
 ## Container ficará ouvindo os acessos na porta 3000
-EXPOSE 3000
+# EXPOSE 3000
 
 ## Não se repete no Dockerfile
 ## Executa o comando npm start para iniciar o script que que está no package.json
-CMD npm start
+# CMD npm start
 
 ## Para testar rode no terminal: 
 ## docker build -t rafajefer/dockernode .  
