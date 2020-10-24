@@ -5,6 +5,8 @@ services: ## Define um serviço
         build: . ## localização do dockerfile
         command: npm start ## comando a executar
         container_name: "app"
+        working_dir: /usr/seubarriga
+        restart: always
         ports:
             - "3000:3000" ## redirecionamento de porta quando chegar alguma requisição na porta 3000 chama o container na porta 3000
         volumes:
